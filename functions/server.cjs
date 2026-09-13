@@ -1,6 +1,7 @@
-import express from "express";
-import OpenAI from "openai";
+// import express from "express";
+// import OpenAI from "openai";
 
+const OpenAI= require('openai');
 const express = require('express');
 const serverless = require('serverless-http');
 const app = express();
