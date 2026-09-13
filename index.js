@@ -44,7 +44,7 @@ async function textToTranslate(e){
         window.location.href = "./index.html";
     })
     document.getElementById('start-chat').addEventListener('click', () => {
-        window.location.href = "chat.html";
+        window.location.href = "./chat.html";
     })}
 
     startChatbtn.addEventListener('click', () => {

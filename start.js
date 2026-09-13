@@ -11,7 +11,7 @@ sendBtn.addEventListener('click',chatMessage)
 async function chatMessage(e){
     e.preventDefault()
     const langToTranslate=document.querySelector('input[name="language"]:checked')
-    console.log(langToTranslate)
+    console.log(langToTranslate.value)
     const userPrompt=`Translate the following text into ${langToTranslate.value}: "${userInput.value}"`
     let addUserHTML=`<div class="user-message">
                     <p>${userInput.value}</p>
