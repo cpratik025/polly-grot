@@ -14,13 +14,11 @@ async function textToTranslate(e){
     e.preventDefault()
     const langToTranslate=document.querySelector('input[name="language"]:checked')
     const userPrompt=`Translate the following text into ${langToTranslate.value}: "${translateText.value}"`
-    console.log(userPrompt)
     const requestBody= await fetch('/api/translate',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({userPrompt})
     })
-    console.log(requestBody)
     const data=await requestBody.json()
     if(!requestBody.ok){
         throw new Error(data.message)
