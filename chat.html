@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>PollyGrot - Language Translation App</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <img src="./images/worldmap.png" id="main-img" alt="logo">
+            <img src="./images/parrot.png" id="parrot-img" alt="logo">
+            <h1 class="app-title">PollyGrot <br \><span class="sub-title">Language Translation App</span></h1>
+        </div>
+    </nav>
+    <main>
+        <div class="chat-container" id="chat-container">
+            <h2 class="chat-title">Chat with PollyGrot</h2>
+            <div class="chat-messages" id="chat-messages">
+                <div class="system-message">
+                    <p>Hello! I'm PollyGrot, your language translation assistant. How can I help you today?</p>
+                </div>
+            </div>
+
+            <div class="chat-input-wrap">
+                    <input type="text" class="chat-input" id="user-input" placeholder="Type a message..." />
+                    <button class="send-button" id="send-btn" aria-label="Send">
+                        <img src="./images/paper-air-plane-airplane-send-message-svgrepo-com.svg" alt="send" />
+                    </button>
+            </div>
+            <div class="lang-btn-container">
+                <div class="lang-flg-container">
+                    <input type="radio" id="fr" class="language-option" name="language" value="franch" checked>
+                    <label for="fr"><img class="flag-icn-img"src="./images/fr-flag.png"></label>
+                </div>
+                <div class="lang-flg-container">
+                    <input type="radio" id="es" class="language-option" name="language" value="spanish">
+                    <label for="es"><img class="flag-icn-img"src="./images/sp-flag.png"></label>
+                </div>
+                <div class="lang-flg-container">
+                        <input type="radio" id="ja" class="language-option" name="language" value="japanese">
+                        <label for="ja"><img class="flag-icn-img"src="./images/jpn-flag.png"></label>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+<script type="module" src="start.js"></script>
+</html>
