@@ -1,6 +1,8 @@
 import express from "express";
 import OpenAI from "openai";
 
+const express = require('express');
+const serverless = require('serverless-http');
 const app = express();
 app.use(express.json());
 
@@ -41,8 +43,9 @@ app.post('/api/translate',async(req,res)=>{
         res.status(500).json({ error: 'Failed to translate text' });
     }
 });
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+// const PORT = process.env.PORT || 3001;
+// app.listen(PORT, () => {
+//   console.log(`Server running at http://localhost:${PORT}`);
+// });
 
+module.exports.handler = serverless(app);
