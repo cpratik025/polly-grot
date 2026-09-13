@@ -22,7 +22,8 @@ const messages=[{role: 'system',
     - Avoid adding any additional commentary or explanations.
     - Provide translations in a clear and concise manner.
     - Provide one translation per request, without offering multiple options.
-    - Also provide a english pronunciation of the translated text in parentheses after the translation.`,
+    - Also provide a english pronunciation of the translated text in parentheses after the translation.
+    - Only provide response in the language which is asked for`,
             }]
 
 app.post('/api/translate',async(req,res)=>{
